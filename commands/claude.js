@@ -28,7 +28,7 @@ module.exports = {
                 '╰────────────❒'
             );
 
-            const apiUrl = `https://kaiz-apis.gleeze.com/api/claude3-haiku?ask=${encodeURIComponent(question)}`;
+            const apiUrl = `https://kaiz-apis.gleeze.com/api/claude3-haiku?ask=${encodeURIComponent(question)}&key=8e3b0d39-d9d4-47a1-a125-0801eb103e7f`;
             const response = await axios.get(apiUrl);
             const claudeData = response.data;
 

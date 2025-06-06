@@ -31,12 +31,11 @@ module.exports = {
                 '╰───────────────────────────'
             );
 
-            const apiUrl = `https://kaiz-apis.gleeze.com/api/goku?ask=${encodeURIComponent(message)}&uid=${encodeURIComponent(userId)}`;
+            const apiUrl = `https://kaiz-apis.gleeze.com/api/goku?ask=${encodeURIComponent(message)}&uid=${encodeURIComponent(userId)}&key=8e3b0d39-d9d4-47a1-a125-0801eb103e7f`;
             const response = await axios.get(apiUrl);
             const gokuData = response.data;
 
             if (gokuData && gokuData.response && gokuData.character === 'Son Goku') {
-                // You could potentially store or process gokuData here if needed for future interactions
                 await sock.sendMessage(
                     m.chat,
                     { text: `🐉 Son Goku says:\n\n${gokuData.response}` },

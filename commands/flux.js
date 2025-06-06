@@ -19,7 +19,7 @@ module.exports = {
             
             m.reply("╭────❒ 🎨 Generating Flux Art ❒\n├⬡ Prompt: " + prompt + "\n├⬡ Please wait...\n╰────────────❒");
             
-            const apiUrl = `https://kaiz-apis.gleeze.com/api/flux?prompt=${encodeURIComponent(prompt)}`;
+            const apiUrl = `https://kaiz-apis.gleeze.com/api/flux?prompt=${encodeURIComponent(prompt)}&key=8e3b0d39-d9d4-47a1-a125-0801eb103e7f`;
             
             await sock.sendMessage(m.chat, {
                 image: { url: apiUrl },

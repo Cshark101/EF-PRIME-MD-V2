@@ -1,6 +1,5 @@
 const axios = require('axios');
 
-
 const gojoUserStates = {};
 
 module.exports = {
@@ -29,15 +28,14 @@ module.exports = {
                 '╭────❒ ⏳ Talking to Gojo ⏳ ❒\n' +
                 '├⬡ Sending your message to the strongest sorcerer...\n' +
                 '├⬡ Please wait for his divine response!\n' +
-                '╰───────────────────────────────'
+                '╰──────────────────'
             );
 
-            const apiUrl = `https://kaiz-apis.gleeze.com/api/gojo?ask=${encodeURIComponent(message)}&uid=${encodeURIComponent(userId)}`;
+            const apiUrl = `https://kaiz-apis.gleeze.com/api/gojo?ask=${encodeURIComponent(message)}&uid=${encodeURIComponent(userId)}&key=8e3b0d39-d9d4-47a1-a125-0801eb103e7f`;
             const response = await axios.get(apiUrl);
             const gojoData = response.data;
 
             if (gojoData && gojoData.response && gojoData.character === 'Satoru Gojo') {
-                
                 await sock.sendMessage(
                     m.chat,
                     { text: `🔵 Satoru Gojo says:\n\n${gojoData.response}` },

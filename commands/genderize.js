@@ -28,7 +28,7 @@ module.exports = {
                 '╰────────────❒'
             );
 
-            const apiUrl = `https://kaiz-apis.gleeze.com/api/genderize?name=${encodeURIComponent(name)}`;
+            const apiUrl = `https://kaiz-apis.gleeze.com/api/genderize?name=${encodeURIComponent(name)}&key=8e3b0d39-d9d4-47a1-a125-0801eb103e7f`;
             const response = await axios.get(apiUrl);
             const genderData = response.data;
 
